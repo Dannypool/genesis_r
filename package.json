@@ -1,0 +1,47 @@
+{
+  "name": "genesis_r",
+  "version": "0.0.0",
+  "description": "backbone reactjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify -t hbsfy app/js/main.js -o app/js/app.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dannypool/genesis_r.git"
+  },
+  "author": "Daniel Castro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dannypool/genesis_r/issues"
+  },
+  "homepage": "https://github.com/Dannypool/genesis_r",
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "browserify": "^6.2.0",
+    "handlebars": "^2.0.0",
+    "hbsfy": "^2.2.1",
+    "jquery": "^2.1.1",
+    "node-static": "^0.7.6",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-changed": "^0.2.1",
+    "gulp-concat": "^2.2.0",
+    "gulp-imagemin": "^0.1.5",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-minify-html": "^0.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-strip-debug": "^0.3.0",
+    "gulp-uglify": "^0.2.1"
+  },
+  "browserify": {
+    "transform": [
+      "hbsfy"
+    ]
+  }
+}

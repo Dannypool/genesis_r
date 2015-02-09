@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- <link rel="stylesheet" href="css/normalize.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/bootstrap.js"></script>
+        <link rel="stylesheet" href="css/main.css"> -->
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Bootstrap theme</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <div class="container theme-showcase" role="main">
+            <p>Hello world! This is HTML5 Boilerplate.</p>
+
+            <div class="main row">
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Panel heading without title</div>
+                      <div class="panel-body panel-height sin-padding">
+                        <ul class="ul-lista">
+                            <li class="li-lista">         
+                                <p class="li-p">test</p>           
+                                <small>test</small>           
+                                <div class="ocultar pos-abajo pos-derecha">             
+                                    <button class="ladda-button btn btn-danger btn-xs btn-del" id="btn_eliminar" data-style="zoom-in" data-size="xs">             
+                                        <span class="glyphicon glyphicon-trash"> </span>             
+                                    </button>             
+                                    <button class="ladda-button btn btn-xs btn-edit" id="btn_modificar" data-style="zoom-in" data-size="xs">             
+                                        <span class="glyphicon glyphicon-edit"> </span>             
+                                    </button>             
+                                    <button class="ladda-button btn btn-xs btn-listas" data-style="zoom-in" data-size="xs">             
+                                        <span class="glyphicon glyphicon-th-list"> </span>             
+                                    </button>           
+                                </div>     
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">Panel heading without title</div>
+                      <div class="panel-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control input-sm" id="txtNombre">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="control-label">Fecha de inicio</label>
+                                    <div class="input-group date customdatepicker"> 
+                                        <input type="text" required="" class="form-control input-sm" id="fechaNac" placeholder="DD/MM/YYYY">  
+                                        <span class="input-group-addon input-sm"> 
+                                            <span class="glyphicon glyphicon-calendar"></span> 
+                                        </span>
+                                    </div> 
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="control-label">Fecha de termino</label>
+                                    <div class="input-group date customdatepicker"> 
+                                        <input type="text" required="" class="form-control input-sm" id="fechaNac" placeholder="DD/MM/YYYY">  
+                                        <span class="input-group-addon input-sm"> 
+                                            <span class="glyphicon glyphicon-calendar"></span> 
+                                        </span>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Descripcion</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="pull-right margen-derecho">
+                                <button type="button" class="btn btn-default btn-sm" id="btn_cancelar_edit">Cancelar</button>
+                                <button type="button" class="btn btn-success btn-sm" id="btn_save_usuario">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        
+
+        
+        <script src="js/app.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+    </body>
+</html>
