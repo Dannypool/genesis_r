@@ -1,21 +1,31 @@
 var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
-    changed     = require('gulp-changed')
+    changed     = require('gulp-changed'),
+    buffer = require('vinyl-buffer')
     imagemin    = require('gulp-imagemin'),
     stripDebug  = require('gulp-strip-debug'),
     minifyCSS   = require('gulp-minify-css'),
     minifyHTML  = require('gulp-minify-html'),
-    browserify  = require('gulp-browserify');
-    rename = require("gulp-rename");
+    browserify = require('browserify');
+    rename = require("gulp-rename"),
+    reactify = require('reactify'),
+    source = require("vinyl-source-stream")
+    livereload = require('gulp-livereload'),
+    reactify = require('reactify');
+
 
 gulp.task('js', function () {
-  gulp.src('app/js/main.js')
-    .pipe(browserify())
-    .pipe(uglify({ compress: true }))
-    .pipe(stripDebug())
-    .pipe(rename("app.js"))
+  var bundler = browserify('./app/js/main.js');
+
+  return bundler
+    .transform(reactify)
+    .bundle()
+    .pipe(source('app.js'))
+    .pipe(buffer())
+    // .pipe(uglify())
     .pipe(gulp.dest('./public/js'));
 });
+
 
 gulp.task('css', function () {
   gulp.src('app/css/**/*.css')

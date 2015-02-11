@@ -1,6 +1,6 @@
 var Backbone = require('backbone'),
-    curso     = require('../models/curso');
+    procedimiento     = require('../models/procedimientos');
 
 module.exports = Backbone.Collection.extend({
-  model: curso
+  model: procedimiento
 });
